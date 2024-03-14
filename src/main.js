@@ -1,8 +1,9 @@
-$(document).ready(function() {
+window.onload = function() {
+  $(document).ready(function() {
     var envelope = $('#envelope');
     var btn_open = $("#open");
     var btn_reset = $("#reset");
-  
+
     envelope.click(function() {
       open();
     });
@@ -12,7 +13,7 @@ $(document).ready(function() {
     btn_reset.click(function() {
       close();
     });
-  
+
     function open() {
       envelope.addClass("open")
         .removeClass("close");
@@ -22,3 +23,4 @@ $(document).ready(function() {
         .removeClass("open");
     }
   });
+}
